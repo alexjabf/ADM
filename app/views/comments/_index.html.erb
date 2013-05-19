@@ -1,0 +1,21 @@
+<div id="startcommets">
+  <h1>Comentarios</h1>
+</div>
+<!--% @comments = Comment.paginate(:page => params[:page], :per_page => 8, :order => 'created_at DESC') %!-->
+<% @comments = Comment.all%>
+<% @comments.each do |comment| %>
+  <div id ="comment"> 
+    <div id="commentImage">
+      <%=  image_tag("/assets/guess.gif", :size => '50x60') %>
+    </div>
+    <font color="black" style="margin-left:1.8em;"><b ><%= "Nombre: "%></b></font ><font color="#464646"><%= comment.name %></font><br />
+    <font color="#45c7ee" style="margin-left:2.8em;" size="1px"><b ><%= comment.created_at.strftime("%d-%m-%Y %H:%M:%S") %></b></font><br />
+    <font color="black" style="margin-left:1.8em;"><b ><%= "Comentario: "%></b></font><br />
+    <font style="margin-left:1.8em;" color="#464646"><%= raw(comment.comment) %> </font>  
+    <div id ="commentoptions">  
+      <%= link_to 'Mostrar', comment_path(comment.id) + "#center", :title => "Mostrar comentario", :style => "color:#45c7ee" %> 
+    </div>
+  </div>
+<% end %>
+<!--%= will_paginate @comments, :class => "root"%!-->
+<br/>

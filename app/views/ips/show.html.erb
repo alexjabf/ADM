@@ -1,0 +1,54 @@
+<h1 style = "color:black"><%= @ip.ip %></h1><br />
+<div id="mapholder"></div>
+<script>
+	  $(function(){
+		      showPosition();
+		        });
+
+			  function showPosition()
+			    {
+				        //var latlon=position.coords.latitude+","+position.coords.longitude;
+					    //$("#survey_latitude").value = position.coords.latitude
+					        //$("#survey_longitude").value = position.coords.longitude
+						    var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+						          +<%=@ip.latitude%>+","+<%=@ip.longitude%>+"&zoom=18&size=400x300&sensor=true";
+							      document.getElementById("mapholder").innerHTML="<iframe width=425 height=350 frameborder=0 scrolling=no marginheight=0 marginwidth=0 src=http://maps.google.com/?saddr="+<%=@ip.latitude%>+","+<%=@ip.longitude%>+"&amp;ie=UTF8&amp;t=m&amp;ll=28.654279,-106.10669&amp;spn=0.006295,0.007174&amp;output=embed></iframe><br />"+    
+							            "<small><a href=http://maps.google.com/?saddr=28.6542787,-106.1066897&amp;ie=UTF8&amp;t=m&amp;ll=28.654279,-106.10669&amp;spn=0.006295,0.007174&amp;source=embed style=color:#0000FF;text-align:left>View Larger Map</a></small>";
+								      }
+							      </script>
+<p><font style = "color:black">Id: </font><%= @ip.id %></p>
+<p><font style = "color:black">Ip: </font><%= @ip.ip %></p>
+<p><font style = "color:black">Address: </font><%= @ip.address %></p>
+<p><font style = "color:black">City: </font><%= @ip.city %></p>
+<p><font style = "color:black">State: </font><%= @ip.state %></p>
+<p><font style = "color:black">Country: </font><%= @ip.country + " " %><%=image_tag("/assets/flags/png/"+ @ip.country_code.downcase + ".png")%></p>
+<p><font style = "color:black">Country Code: </font><%= @ip.country_code %></p>
+<p><font style = "color:black">Region Code: </font><%= @ip.region_code %></p>
+<p><font style = "color:black">Latitude: </font><%= @ip.latitude %></p>
+<p><font style = "color:black">Longitude: </font><%= @ip.longitude %></p>
+<p><font style = "color:black">Host: </font><%= @ip.host %></p>
+<p><font style = "color:black">Port: </font><%= @ip.port %></p>
+<p><font style = "color:black">Time Zone: </font><%= @ip.time_zone %></p>
+<p><font style = "color:black">Created at: </font><%= @ip.created_at %></p>
+<p><font style = "color:black">Description: </font><%= @ip.description %></p>
+<div id ="map">  
+<iframe width="865" height="754" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=es-419&amp;safe=off&amp;q=google+maps+<%= @ip.city %>+<%= @ip.country %>&amp;ie=UTF8&amp;hq=&amp;hnear=<%= @ip.city %>&amp;gl=<%= @ip.country_code %>&amp;t=m&amp;z=12&amp;ll=<%= @ip.latitude %>,<%= @ip.longitude %>&amp;output=embed"></iframe><br />
+<small><a href="http://maps.google.com/maps?hl=es-419&amp;safe=off&amp;q=google+maps+<%= @ip.city %>+<%= @ip.country %>&amp;ie=UTF8&amp;hq=&amp;hnear=<%= @ip.city %>&amp;gl=<%= @ip.country_code %>&amp;t=m&amp;z=12&amp;ll=<%= @ip.latitude %>,<%= @ip.longitude %>&amp;source=embed" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
+</div><br />
+<iframe width="865" height="754" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.googleapis.com/maps/api/staticmap?center="
+	      +<%=@ip.latitude%>+","+<%=@ip.longitude%>+"&zoom=18&size=400x300&sensor=true";></iframe>
+<p><font style = "color:black"></font><%= link_to 'Regresar', ips_path %></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

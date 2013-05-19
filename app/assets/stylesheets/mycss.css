@@ -1,0 +1,227 @@
+/* 
+    Document   : mycss
+    Created on : May 18, 2012, 10:17:02 PM
+    Author     : alejandroballesteros
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+
+#alllinks {
+    float:right;
+    margin-top: 30px; 
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+#alllinks a{
+    color: #45c7ee;
+    background: white;
+    text-decoration: none;
+}
+
+#alllinks a:hover{
+    color: white;
+    background-color: #45c7ee;
+    text-decoration: none;
+}
+
+
+#alllinks a:visited{
+    color: #45c7ee;
+    background: white;
+    text-decoration: none;
+}
+
+#alllinks a:visited:hover{
+    color: white;
+    background: #45c7ee;
+    text-decoration: underline;
+}
+
+
+#indexlinks1 a{
+    color: #45c7ee;
+    text-decoration: none;
+}
+
+#indexlinks1 a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#indexlinks2 a{
+    color: #888;
+    text-decoration: none;
+}
+
+#indexlinks2 a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #45c7ee;
+}
+
+#map{
+    border: 4px solid  #45c7ee;
+    margin-top: 10px;
+    background: #f4f8fb; 
+    -moz-border-radius: 10px;
+}
+
+#comment{
+    float: left;
+    border: 4px solid  #45c7ee;
+    margin-top: 10px;
+    width: 840px;
+    padding: 14px 14px 14px 14px;   
+    background: #f4f8fb; 
+    -moz-border-radius: 10px;
+}
+
+#comment a{
+    text-decoration: none;
+    color: #89CFF0;
+}
+
+#comment a:hover{
+    color: white;
+    text-decoration: none;
+    background: #45c7ee;
+}
+
+#commentImage{
+    border: 2px solid  #4682B4;
+    float: left;
+    float: inherit;
+    margin-right: 10px;
+}
+
+#commentImage:hover{
+    cursor: pointer;
+}
+
+#showImage{
+    border: 2px #394654;
+}
+
+.commentTitle{
+    color: #394654; 
+    font-size: 20px;
+    padding: 12px;
+}
+
+.commentTitle p{
+    text-align: center;
+}
+
+#commentoptions{
+    margin-top: 10px;
+    float: right;    
+    color: #89CFF0; 
+    font-size: 12px; 
+}
+
+#commentbutton{
+    margin-top: 12px;
+    float: right;
+}
+
+#newcommment{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    float: left;
+    border: 4px solid  #45c7ee;
+    width: 842px;
+    padding: 14px 14px 14px 14px;   
+    background: #f4f8fb; 
+    color: white;    
+    -moz-border-radius: 10px;
+}
+
+input[type=submit] {
+    width: 120px; height: 40px; float: right;
+    -moz-box-shadow: 0px 0px 15px #89CFF0;-webkit-box-shadow: 0px 0px 15px #89CFF0;
+    border: 2px solid  #45c7ee;
+    background: -moz-linear-gradient(top, #45c7ee 0%, #89CFF0 50%); /* firefox */
+    cursor: pointer;
+    font-size: 14px;
+    font:  oblique large  fantasy;
+    color: white;
+}
+
+.commentbutton {
+    width: 80px; height: 20px; 
+    float: left;
+    border: 2px solid  #45c7ee;
+    background: -moz-linear-gradient(top, #45c7ee 0%, #89CFF0 50%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#89CFF0), color-stop(100%,#89CFF0)); /* webkit */
+    cursor: pointer;
+    font-size: 10px;
+    font:  oblique large;
+    color: white;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    display: inline-table; 
+}
+
+
+#commentInput{
+    border:  #e7e7e7 3px inset;
+    width: 300px;
+    height: 24px;
+    background: white;
+    color: #45c7ee;
+    font-size: 18px;
+    padding: 2px 2px 2px 2px;
+    -moz-border-radius: 5px;
+}
+
+
+#flash_notice, #flash_error, #flash_alert {
+    padding: 5px 8px;
+    margin-top: 14px;
+    text-decoration:  blink;
+    -moz-border-radius: 10px;
+    border: solid 2px  #4682B4;
+    color: white;
+}
+
+#flash_notice {
+    background-color: #45c7ee;
+    text-decoration: blink;
+}
+
+#flash_error {
+    background-color: #2a343f;
+    text-decoration: blink;
+}
+
+#flash_alert {
+    background-color: #4682B4;
+    text-decoration: blink;
+}
+
+#co_index{
+    float: left;
+    border: 4px solid  #45c7ee;
+    margin-top: 10px;
+    width: 842px;
+    padding: 14px 14px 14px 14px;   
+    background: #f4f8fb; 
+    -moz-border-radius: 10px;
+}
+
+#table{
+    background-color: #2a343f;
+}
+

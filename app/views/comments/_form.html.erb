@@ -1,0 +1,43 @@
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <%if @comment.errors.count > 1%>
+        <h2><%=@comment.errors.count%> Errores prohibieron este comentario de ser guardado.</h2>
+      <%else%>
+        <h2>Un error prohibió este comentario de ser guardado.</h2>
+      <%end%>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <%@num = 1%>
+          <li><%=  msg %></li>
+          <%@num = 1 + @num%>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br />
+  <%= f.label :name, "Nombre: *", :style => "color:black"%><br />
+  <div class="field-holder">
+    <%= f.text_field :name,  :id=> "commentInput" %><br />
+  </div>
+  <br />
+  <%= f.label :email, "Correo Electrónico (No será mostrado): *", :style => "color:black"  %><br />
+  <div class="field-holder">
+    <%= f.email_field :email, :id=> "commentInput" %><br />
+  </div>
+  <br />
+  <%= f.label :title, "Asunto: *", :style => "color:black" %><br />
+  <div class="field-holder">
+    <%= f.text_field :title, :id=> "commentInput"  %>
+  </div>
+  <br />
+  <%= f.label :comment, "Comentario: *", :style => "color:black" %><br />
+  <div class="field-holder">
+    <%= f.cktext_area :comment, :toolbar => 'Easy', :width => 842, :height => 100 %>
+  </div><br />
+
+  <div class="actions">
+    <%= f.submit "Aceptar", :title => "Enviar Comentario"%>
+  </div>
+<% end %>

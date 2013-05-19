@@ -1,0 +1,75 @@
+<%= form_for(@oc_member) do |f| %>
+  <% if @oc_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@oc_member.errors.count, "error") %> prohibited this oc_member from being saved:</h2>
+
+      <ul>
+      <% @oc_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field-holder">
+    <%= f.label :first_names, "Nombres:"%><br />
+    <%= f.text_field :first_names %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :last_names, "Apellidos:"%><br />
+    <%= f.text_field :last_names %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :position, "Posición:" %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :address1, "Dirección:" %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :address2, "Colonia:" %><br />
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :city, "Ciudad:" %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :state, "Estado:" %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :zipcode, "Código Postal:" %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :phone, "Teléfono:" %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :fax, "Numero de Fax:" %><br />
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :cellphone, "Celular:" %><br />
+    <%= f.text_field :cellphone %>
+  </div>
+  <div class="field-holder">
+    <%= f.label :email, "Correo Electrónico:" %><br />
+    <%= f.text_field :email %>
+  </div>
+
+    <div class="field-holder">
+        <%= f.label :sex_type, "Sexo: "%><br />
+        <%= f.select :sex_type, options_for_select([["Hombre"],["Mujer"]]) %>
+    </div>
+
+  <div class="field-holder">
+    <%= f.label "Foto de Perfil:" %><br />
+    <%= f.file_field :avatar%><br />
+  </div>
+  <div class="actions">
+    <%= f.submit "Aceptar", :title => "Aceptar"%>
+  </div>
+<% end %>

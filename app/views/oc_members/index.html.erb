@@ -1,0 +1,32 @@
+<h1>Comité Organizador</h1><br />
+
+<div id="co_index">
+  <h2 style="margin-bottom: 30px; text-align: center;">Integrantes del Comité Organizador</h2>
+  <table style="margin-left: 20px">
+    <% @oc_members.each do |oc_member| %>
+      <% if oc_member.sex_type == "Hombre" %>
+        <% @Dr = "Dr. " %>
+      <% else %>
+        <% @Dr = "Dra. " %>
+      <% end %>
+      <tr class="float_left_thumb">
+        <td class="group" rel="group">
+          <div style="margin-bottom: 24px ">
+            <%=link_to image_tag(oc_member.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%>
+          </div>
+          <div id="indexlinks1"><%=link_to oc_member.position + ": ", oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
+          <div id="indexlinks2"><%=link_to @Dr + oc_member.fullname, oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
+        </td>
+
+      </tr>
+    <%end%>
+  </table>
+</div>
+<br />
+
+<div id="alllinks">
+  <% if logged_in? %>
+    <%= link_to 'Registrar Nuevo Integrante', new_oc_member_path, :title => 'Registrar Nuevo Integrante' %> |
+  <%end%>
+  <%= link_to 'Inicio', root_path, :title => 'Inicio' %>
+</div>

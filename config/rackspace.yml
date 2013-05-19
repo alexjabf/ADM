@@ -1,0 +1,12 @@
+DEFAULTS: &DEFAULTS
+    username: alexjabf
+    api_key: bfe464c6b9027a3e1e91b43336cc259a
+
+development:
+    <<: *DEFAULTS
+
+tets:
+    <<: *DEFAULTS
+    
+production:
+    <<: *DEFAULTS

@@ -1,0 +1,39 @@
+<div style="float: left; margin-top: 10px;">
+  <%= button_tag 'Log in', :class=>"commentbutton", :title => "Log in",  :onclick => 'getform()', :id => "login"%>
+</div>
+
+<script>
+  var number = 1;
+  function getform() {
+    number++
+    $("div#togglelogin").toggle();
+    if (number%2 == 0){
+      $('#login').text("Cancel");
+    }else{
+      $('#login').text("Log in");
+    }
+  }
+</script>
+
+<div style="margin-top:25px; display:none" id="togglelogin">
+  <div id="newcommment">
+    <h2 style="color: #45c7ee;">Log in</h2><br />
+    <%= form_tag sessions_path do %>
+      <p style="color: black">
+        <%= label_tag :login, "Username or Email Address" %><br />
+        <%= text_field_tag :login, params[:login] %>
+      </p>
+      <p style="color: black">
+        <%= label_tag :password %><br />
+        <%= password_field_tag :password %>
+      </p>
+      <p><%= submit_tag "Log in" %></p>
+    <% end %>
+    <br />
+  </div>
+</div><br /><br /><br />
+
+
+
+
+

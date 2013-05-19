@@ -1,0 +1,32 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+   activerecord:
+    models:
+    attributes:
+      comment:
+        name: "Nombre: "
+        email: "Correo Electrónico: "
+        title: "Asunto: "
+        comment: "Comentario: "
+    errors:
+      template:
+        header:
+          one:   "1 error prohisdfsdfbited this %{model} from being saved"
+          other: "%{count} errors prohibisfdsdsdfsted this %{model} from being saved"
+          body:    "There were problems with the following fields:"
+      models:
+        comment:
+          attributes:
+           name: 
+              blank: "Debe introducir su nombre."
+           email: 
+              blank: "Debe introducir su correo electrónico."
+           title: 
+              blank: "Debe introducir un asunto"
+           comment: 
+              blank: "Debe introducir un comentario."
+              
+              
+

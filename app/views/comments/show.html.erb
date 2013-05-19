@@ -1,0 +1,19 @@
+
+<h2>Comentario de <%= @comment.name %></h2>
+<div id ="comment"> 
+  <div id="commentImage">
+        <%=  image_tag("/assets/guess.gif", :size => '50x60') %>
+  </div>
+    <font color="black" style="margin-left:1.8em;"><b ><%= "Nombre: "%></b></font ><font color="#464646"><%= @comment.name %></font><br />
+    <font color="#45c7ee" style="margin-left:2.8em;" size="1px"><b ><%= @comment.created_at.strftime("%d-%m-%Y %H:%M:%S") %></b></font><br />
+    <font color="black" style="margin-left:1.8em;"><b ><%= "Comentario: "%></b></font><br />
+    <font style="margin-left:1.8em;" color="#464646"><%= raw(@comment.comment) %> </font>
+</div>
+<p >
+  <div id="alllinks">
+  <%= link_to 'Regresar', new_comment_path + "#center" %>         
+    <!--%if current_user.user_type == "Administrator"%!-->
+       <!--%= link_to 'Editar', edit_comment_path(@comment), :title => "Editar comentario"  %!--> 
+       <!--%= link_to 'Eliminar', @comment, confirm: '¿Esta seguro que desea eliminar este comentario?', method: :delete, :title => "Eliminar comentario"  %!-->
+    <!--%end%!-->
+  </div>

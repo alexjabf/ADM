@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"></link>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="title" content="LXIV Reunión Dental de Provincia Chihuahua 2014" />
+    <meta name="description" content="LXIV Reunión Dental de Provincia Chihuahua 2014" />
+    <meta name="keywords" content="LXIV Reunión Dental de Provincia Chihuahua 2014" />
+    <meta name="author" content="Javier Alejandro Ballesteros Fierro" />
+    <meta name="copyright" content="Javier Alejandro Ballesteros Fierro" />
+    <meta name="publisher" content="Javier Alejandro Ballesteros Fierro" />
+    <meta name="language" content="Español" />
+    <meta name="robots" content="index, follow" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+
+    <title>LXIV Reunión Dental de Provincia Chihuahua 2014</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <% rails_tooltip_stuff_if_used %>
+    <%= csrf_meta_tags %>
+    <div id="fb-root"></div>
+
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+  </head>
+
+  <div id="maintitle">
+    <%=link_to  image_tag("/assets/Logo.png", :size => '50x50', :style => 'float:left;'), root_path %><p>Congreso Internacional</p><%=link_to  image_tag("/assets/adm.png", :size => '50x50', :style => 'float:right; position:relative;'), "http://www.adm.org.mx/" %>
+  </div>
+
+  <body>
+    <div id="page" class="shell">
+      <!-- Logo + Navigation -->
+      <div id="top">
+        <div id="header-background">
+          <h1><%=link_to  image_tag("/assets/header3.jpg"), root_path%></h1>
+        </div>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+        <% if logged_in? %>
+          <br />
+	  Welcome <%= current_user.first_names + " " + current_user.last_names + ". "%>
+          <%= link_to "Edit profile", edit_user_path(current_user.id) %> or
+	  <%= link_to "Log out", logout_path %><br />
+	  <%= link_to "Ip's", ips_index_path%>
+        <% end %>
+        <div class="cl">&nbsp;</div>
+        <div id="navigation">
+          <ul>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com" title="Ir a página de Inicio" class="active"><span>Inicio</span></a></li>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/oc_members" title="Ir a página del Comité Organizador"><span>Comité Organizador</span></a></li>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index" title="Ir a página de Centro de Convenciones"><span>Centro de Convenciones</span></a></li>
+            <li><a href="#" title="Ir a página de Hoteles Sede"><span>Hoteles Sede</span></a></li>
+            <li><a href="#" title="Ir a página de Eventos"><span>Eventos</span></a></li>
+            <li><a href="#" title="Ir a página de Conferencistas"><span>Conferencistas</span></a></li>
+            <li><a href="#" title="Ir a página de Inscripciones"><span>Inscripciones</span></a></li>
+          </ul>
+        </div>	
+      </div>
+      <!-- END Logo + Navigation -->
+      <!-- Main -->
+
+      <div id="page-body">
+        <form action="" method="post" id="search" style="position: relative">
+          <div class="field-holder">
+            <input  type="text" class="field" value="Buscar en el Sitio" title="Buscar en el Sitio" />
+          </div>
+          <input type="submit" class="button" value="Search" title="Buscar"/>
+          <div class="cl">&nbsp;</div>
+        </form>
+        <div class="cl">&nbsp;</div>
+        <div style="margin-top: 30px;" id="center"></div>
+        <%= yield %>
+        <div id="main">
+          <!-- Three Column Content -->
+          <div class="cols three-cols">
+            <div class="cl">&nbsp;</div>
+            <div class="col">
+              <h2>Jueves 22 de Mayo</h2>
+              <h3>Nombre de la Conferencia Uno</h3>
+              <p>Este día se realizara la conferencia sobre ……</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+            </div>
+            <div class="col">
+              <h2>Viernes 23 de Mayo</h2>
+              <h3>Nombre de la Conferencia Dos</h3>
+              <p>Este día se realizara la conferencia sobre ……</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+            </div>
+            <div class="col col-last">
+              <h2>Sábado 24 de Mayo</h2>
+              <h3>Nombre de la Conferencia Tres</h3>
+              <p>Este día se realizara la conferencia sobre ……</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </div>
+          <!-- END Three Column Content -->
+          <!-- Two Column Content -->
+          <div class="cols two-cols">
+            <div class="cl">&nbsp;</div>
+            <div class="col">
+              <h2>Comité Organizador</h2>
+              <% @oc_members = OcMember.find(:all, :order => "created_at ASC")%>
+              <table style="margin-left: 20px">
+                <% @oc_members.each do |oc_member| %>
+                  <% if oc_member.sex_type == "Hombre" %>
+                    <% @Dr = "Dr. " %>
+                  <% else %>
+                    <% @Dr = "Dra. " %>
+                  <% end %>
+                  <div id="indexlinks1"><%=link_to oc_member.position + ": ", oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
+                  <div id="indexlinks2"><%=link_to @Dr + oc_member.fullname, oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
+                <%end%>
+              </table>
+              <p><%=link_to "Mas Información", oc_members_path%></p>
+            </div>
+            <div class="col col-last">
+              <h2>Centro de Convenciones</h2>
+	      <p>Ave. Tecnológico y Escudero C.P. 31120 Chihuahua, Chihuahua, México
+	      Tel: 52 (614) 214-2600 Fax: 52 (614) 214-2620
+	      01-800-EXPOCHIH (01-800-39762444)
+      	      <%=link_to "www.expochihuahua.com.mx", "http://www.chihuahuamexico.com"%></p>
+	      <%=link_to image_tag("http://www.noticiasaldia.com.mx/img/notas/36598_72fd25ac94.jpg", :size => "256x165", :style => "margin-left:60px"), "http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"%><br /><br />
+	      <p><a href="http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"" class="more">Mas Información</a></p>
+            </div>
+            <div class="cl">&nbsp;</div>
+            <div class="col">
+              <h2>Hoteles Sede</h2>
+              <p>Breve explicación sobre los hoteles sede</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+            </div>
+            <div class="col col-last">
+              <h2>Eventos</h2>
+              <p>Breve explicación sobre el comité los eventos que se realizaran.</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+            </div>
+            <div class="cl">&nbsp;</div>
+            <div class="col">
+              <h2>Conferencistas</h2>
+              <p>Breve explicación sobre los conferencistas</p>
+              <p><a href="#" class="more">Mas Información</a></p>
+              <div class="fb-like" data-href="http://www.dentaldeprovinciachihuahua2014.com/" data-send="true" data-width="450" data-show-faces="true"></div>
+              <div class="fb-comments" data-href="http://www.dentaldeprovinciachihuahua2014.com" data-num-posts="6" data-width="400" data-colorscheme="dark"></div>
+            </div>
+            <div class="col col-last">
+              <h2>Tours y Transportación</h2>
+              <p>Breve explicación sobre los tours y la transportación</p>
+	      <%=link_to "ah-chihuahua", "http://www.ah-chihuahua.com"%><br />
+	       <%=link_to "Chihuahua Barbaro", "http://www.chihuahuabarbaro.com"%>
+	      
+              <p><a href="#" class="more">Mas Información</a></p>
+              <div class="fb-activity" data-site="dentaldeprovinciachihuahua2014.com" data-width="400" data-height="300" data-header="true" data-border-color="black" data-font="arial" data-recommendations="true" data-colorscheme="dark"></div>
+
+            </div>
+          </div>
+          <div class="cl">&nbsp;</div>
+          <!-- END Two Column Content -->
+
+
+
+          <div class="cl">&nbsp;</div>
+
+        </div>
+      </div>
+
+      <!-- END Main -->
+      <!-- Footer -->
+      <div id="footer">
+        <p class="right">&copy; 2010 - LXIV Reunión Dental de Provincia Chihuahua 2014 &nbsp;</p>
+        <p><%=link_to "Contacto", contact_info_index_path%><span>&nbsp;</span><a href="#">Transportación</a><span>&nbsp;</span><%=link_to "Mapas", maps_index_path%><span>&nbsp;</span><a href="#">Tours</a><span>&nbsp;</span><%=link_to "Información", info_index_path%></p>
+        <div class="cl">&nbsp;</div>
+      </div>
+      <!-- END Footer -->
+      <br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<div style="float: right; margin-top: 10px;">
+  <%= button_tag 'Comentar', :class=>"commentbutton", :title => "Comentar",  :onclick => 'getform()', :id => "postgossip"%>
+</div>
+
+<script>
+  var number = 1;
+  function getform() {
+    number++
+    $("div#togglepostgossip").toggle();
+    if (number%2 == 0){
+      $('#postgossip').text("Ocultar");
+    }else{
+      $('#postgossip').text("Comentar");
+    }
+  }
+</script>
+
+<div style="margin-top:25px; display:none" id="togglepostgossip">
+  <div id="newcommment">
+    <h2 style="color: #45c7ee;">Comentar</h2>
+    <%= render 'form'%>
+  </div>
+</div>
+
+<%= render :partial => 'comments/index' %>
+
+<div id ="alllinks" style="margin-bottom: 20px;" > 
+  <%=link_to "Comentar", "#center", :onclick => 'getform()',%>
+</div>
+
+
