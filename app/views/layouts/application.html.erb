@@ -16,7 +16,7 @@
     <title>LXIV Reunión Dental de Provincia Chihuahua 2014</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <% rails_tooltip_stuff_if_used %>
+    <%# rails_tooltip_stuff_if_used %>
     <%= csrf_meta_tags %>
     <div id="fb-root"></div>
 
@@ -51,7 +51,7 @@
   </head>
 
   <div id="maintitle">
-    <%=link_to  image_tag("/assets/Logo.png", :size => '50x50', :style => 'float:left;'), root_path %><p>Congreso Internacional</p><%=link_to  image_tag("/assets/adm.png", :size => '50x50', :style => 'float:right; position:relative;'), "http://www.adm.org.mx/" %>
+    <%=link_to  image_tag("/assets/Logo.png", :size => '50x50', :style => 'float:left; position:absolute;'), root_path %><p>Congreso Internacional</p><%=link_to  image_tag("/assets/adm.png", :size => '50x50', :style => 'float:right; position:absolute;'), "http://www.adm.org.mx/" %>
   </div>
 
   <body>

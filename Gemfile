@@ -2,28 +2,18 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-gem 'sqlite3'
-gem 'thin'
-gem 'pg'
+gem 'mysql2'
 
+gem 'json'
 
-group :development do
-  gem 'rspec-rails'
-end
-
-
-group :test do
-  gem 'rspec-rails'
-  gem 'webrat'
-end
-
-group :production do
-gem 'pg'
-end
-
+# Gems used only for assets and not required
+# in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'execjs'
+  gem 'libv8', '3.3.10.4'
+  gem 'therubyracer', '0.10.2'
   gem 'uglifier'
   gem 'railties'
 end
@@ -36,7 +26,7 @@ gem 'cloudfiles'
 gem 'paperclip-cloudfiles'
 gem 'mime-types'#, "~> 1.17.2"
 gem 'ckeditor', '3.7.1'
-gem "paperclip", "~> 3.0.1"
+gem "paperclip"
 gem 'foreigner'
 gem 'immigrant'
 gem 'rails_tooltip'
@@ -45,7 +35,7 @@ gem "nifty-generators"
 gem "mocha"
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "execjs"
-gem "therubyracer"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -60,5 +50,3 @@ gem "therubyracer"
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-

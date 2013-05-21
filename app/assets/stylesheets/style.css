@@ -25,7 +25,7 @@ p { padding-bottom: 18px; }
 
 .left, .alignleft { float: left; display: inline; }
 .right, .alignright { float: right; display: inline; }
-
+14px 
 .cl { font-size: 0; line-height: 0; clear: both; display: block; height: 0; }
 
 .notext { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
@@ -138,14 +138,14 @@ h3.txt-247 { background-image: url(images/txt-247.gif); }
     color: white;
     background: #2a343f;
     height: 50px;
-    text-align: center;
 }
 
 #maintitle p{
-    margin-top: 14px;
     font-size: 28px;
-    position: absolute;
-    margin-left: 470px;
+    position: absolute;    
+    padding-top:14px;
+    text-align:center;
+    width: 100%;
 }
 #maintitle p a{
     color: #45c7ee;
