@@ -165,8 +165,14 @@
             </div>
             <div class="col col-last">
               <h2>Eventos</h2>
-              <p>Breve explicación sobre los eventos que se realizaran.</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+                          <% @events = Event.find(:all, :order => "created_at ASC")%>
+              <table style="margin-left: 20px">
+                <% @events.each do |event| %>
+                  <div id="indexlinks1"><%=link_to event.name, event, :title => event.name%></div>
+                  <div id="indexlinks2"><%=link_to event.start_date, event, :title => event.place%></div>
+                <%end%>
+              </table>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events" class="more">Mas Información</a></p>
             </div>
             <div class="cl">&nbsp;</div>
             <div class="col">

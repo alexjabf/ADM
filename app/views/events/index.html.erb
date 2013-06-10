@@ -10,6 +10,7 @@
             <%=link_to image_tag(event.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), event, :title => event.name%>
           </div>
           <div id="indexlinks1"><%=link_to event.name, event, :title => event.name%></div>
+          <div id="indexlinks2"><%=link_to event.place, event, :title => event.place%></div>
           <div id="indexlinks2"><%=link_to event.start_date, event, :title => event.name%></div>
         </td>
 
