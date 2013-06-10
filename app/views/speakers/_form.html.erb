@@ -1,0 +1,33 @@
+<%= form_for(@speaker) do |f| %>
+  <% if @speaker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@speaker.errors.count, "error") %> prohibited this speaker from being saved:</h2>
+
+      <ul>
+      <% @speaker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %><br />
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :topic %><br />
+    <%= f.text_field :topic %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field-holder">
+    <%= f.label "Foto de Perfil:" %><br />
+    <%= f.file_field :avatar%><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

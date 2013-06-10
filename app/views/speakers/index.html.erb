@@ -1,0 +1,27 @@
+<div id="co_index">
+  <h2 style="margin-bottom: 30px; text-align: center;">Conferencistas Confirmados Dental de Provincia Chihuahua 2014</h2>
+  <table>
+    <ul>
+      <% @speakers.each do |speaker| %>
+      <tr class="float_left_thumb">
+        <td class="group" rel="group">
+          <div style="margin-bottom: 24px ">
+            <%=link_to image_tag(speaker.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), speaker, :title => speaker.fullname + " (#{speaker.country})"%>
+          </div>
+          <div id="indexlinks1"><%=link_to speaker.fullname + " (#{speaker.country})", speaker, :title => speaker.fullname%></div>
+          <div id="indexlinks2"><%=link_to "Tema: " + speaker.topic, speaker, :title => speaker.topic%></div>
+        </td>
+
+      </tr>
+    <%end%>
+    </ul>
+  </table>
+</div>
+<br />
+
+<div id="alllinks">
+  <% if logged_in? %>
+    <%= link_to 'Registrar Nuevo Conferencista', new_speaker_path, :title => 'Registrar Nuevo Conferencista' %> |
+  <%end%>
+  <%= link_to 'Inicio', root_path, :title => 'Inicio' %>
+</div>

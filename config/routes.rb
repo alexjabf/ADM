@@ -1,5 +1,7 @@
 ADM::Application.routes.draw do
 
+  resources :speakers
+
   resources :events
 
   resources :hotels
