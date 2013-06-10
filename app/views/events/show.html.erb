@@ -1,0 +1,21 @@
+<div id ="comment" style="margin-bottom: 20px">    
+  <h1 style="text-align:center; margin-bottom: 10px;"><%= @event.name %></h1>
+  <div id="commentImage" style="margin-right: 58px; background-position: top" >
+    <%=link_to image_tag(@event.avatar.url, :size => "200x200"), @event.avatar.url, :class =>"group", :title => @event.name%>
+  </div>
+  <div id="infocontainer";>
+    <br />
+    <font color="#4682B4"><b ><%= "Inicia: "%></b></font><%= @event.start_date %><br /> 
+    <font color="#4682B4"><b ><%= "Termina: "%></b></font><%= @event.end_date %><br />
+    <font color="#4682B4"><b ><%= "Lugar: "%></b></font><%= @event.end_date %><br /> 
+    <%= @event.description %><br />  
+  </div>
+
+
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_event_path(@event) %> |
+    <%= link_to 'Destroy', @event, confirm: 'Are you sure?', method: :delete %>
+  <%end%>
+  <br /> 
+  <%= link_to 'Regresar', events_path, :style => "float:right", :title => "Regresar al listado de hoteles."%>
+</div>

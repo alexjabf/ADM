@@ -25,7 +25,6 @@ p { padding-bottom: 18px; }
 
 .left, .alignleft { float: left; display: inline; }
 .right, .alignright { float: right; display: inline; }
-14px 
 .cl { font-size: 0; line-height: 0; clear: both; display: block; height: 0; }
 
 .notext { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
