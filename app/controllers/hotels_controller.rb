@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-  #before_filter :login_required
+  before_filter :login_required
   # GET /hotels
   # GET /hotels.json
   def index

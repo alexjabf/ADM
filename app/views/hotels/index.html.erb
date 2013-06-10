@@ -3,6 +3,7 @@
   <% @hotels.each do |hotel| %>
     <h2 style="text-align: center"><%= link_to hotel.name, hotel%></h2>
     <%= link_to image_tag(hotel.avatar.url, :size => "845x800"), hotel %>
+    <br /><br />
   <% end %>
 </div>
 <br />

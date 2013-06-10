@@ -110,6 +110,13 @@ ActiveRecord::Schema.define(:version => 20130610023300) do
     t.datetime "avatar_updated_at"
   end
 
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "first_names"
     t.string   "last_names"

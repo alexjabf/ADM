@@ -14,10 +14,12 @@
     <br />
     <font color="#4682B4"><b ><%= "Posición: "%></b></font><%= @oc_member.position %><br />
     <font color="#4682B4"><b ><%= "Dirección: "%></b></font><%=@oc_member.address1 + " " + @oc_member.address2%><br />
-    <span style="margin-left: 60px;"><%= "Cd. " + @oc_member.city + ", " + @oc_member.state + ". "%><br /></span>
-    <span style="margin-left: 60px;"><%= "C.P. " + @oc_member.zipcode%><br /></span>
+    <span style="margin-left: 62px;"><%= "Cd. " + @oc_member.city + ", " + @oc_member.state + ". "%><br /></span>
+    <span style="margin-left: 62px;"><%= "C.P. " + @oc_member.zipcode%><br /></span>
     <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @oc_member.phone %><br /> 
+    <% unless @oc_member.fax %>
     <font color="#4682B4"><b ><%= "Numero de Fax: "%></b></font><%= @oc_member.fax %><br /> 
+    <%end%>
     <font color="#4682B4"><b ><%= "Celular: "%></b></font><%= @oc_member.cellphone %><br /> 
     <font color="#4682B4"><b ><%= "Correo Electrónico: "%></b></font><%=mail_to @oc_member.email%> 
   </div>

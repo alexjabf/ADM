@@ -19,7 +19,7 @@ group :assets do
 end
 
 group :local do
-  gem 'pg'
+  #gem 'pg'
 end
 
 gem 'jquery-rails'

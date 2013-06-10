@@ -153,13 +153,19 @@
             </div>
             <div class="cl">&nbsp;</div>
             <div class="col">
-              <h2>Hoteles Sede</h2>
-              <p>Breve explicación sobre los hoteles sede</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+                          <h2>Hoteles Sede</h2>
+                          <% @hotels = Hotel.find(:all, :order => "created_at ASC")%>
+              <table style="margin-left: 20px">
+                <% @hotels.each do |hotel| %>
+                  <div id="indexlinks1"><%=link_to hotel.name, hotel, :title => hotel.name%></div>
+                  <div id="indexlinks2"><%=link_to hotel.webpage, hotel.webpage, :title => hotel.webpage%></div>
+                <%end%>
+              </table>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/hotels" class="more">Mas Información</a></p>
             </div>
             <div class="col col-last">
               <h2>Eventos</h2>
-              <p>Breve explicación sobre el comité los eventos que se realizaran.</p>
+              <p>Breve explicación sobre los eventos que se realizaran.</p>
               <p><a href="#" class="more">Mas Información</a></p>
             </div>
             <div class="cl">&nbsp;</div>
