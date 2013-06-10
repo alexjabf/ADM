@@ -1,0 +1,69 @@
+<%= form_for(@hotel) do |f| %>
+  <% if @hotel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hotel.errors.count, "error") %> prohibited this hotel from being saved:</h2>
+
+      <ul>
+        <% @hotel.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone1 %><br />
+    <%= f.text_field :phone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone2 %><br />
+    <%= f.text_field :phone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :webpage %><br />
+    <%= f.text_field :webpage %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field-holder">
+    <%= f.label "Logo:" %><br />
+    <%= f.file_field :avatar%><br />
+  </div>
+  <div class="field-holder">
+    <%= f.label "Flyer:" %><br />
+    <%= f.file_field :flyer%><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

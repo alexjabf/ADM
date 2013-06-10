@@ -18,6 +18,10 @@ group :assets do
   gem 'railties'
 end
 
+group :local do
+  gem 'pg'
+end
+
 gem 'jquery-rails'
 
 #GEMS TO ADD TO SERVER

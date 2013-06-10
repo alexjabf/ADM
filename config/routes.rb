@@ -1,5 +1,7 @@
 ADM::Application.routes.draw do
 
+  resources :hotels
+
   get "exposition_center/index"
   
   get "ips/index"   

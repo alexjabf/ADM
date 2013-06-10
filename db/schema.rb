@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120622013420) do
+ActiveRecord::Schema.define(:version => 20130610023300) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -44,6 +44,30 @@ ActiveRecord::Schema.define(:version => 20120622013420) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "hotels", :force => true do |t|
+    t.string   "name"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "fax"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "webpage"
+    t.string   "email"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "flyer_file_name"
+    t.string   "flyer_content_type"
+    t.integer  "flyer_file_size"
+    t.datetime "flyer_updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "ips", :force => true do |t|

@@ -1,0 +1,29 @@
+<fulfillmentToken fulfillmentType="loan" auth="user" xmlns="http://ns.adobe.com/adept">
+  <distributor>urn:uuid:a457f3f2-3b89-48ff-b549-dabea15e178a</distributor>
+  <operatorURL>http://pruebaadobe.uach.mx:8080/fulfillment</operatorURL>
+  <transaction>ACS4-7120293802081367528200946</transaction>
+  <expiration>2013-05-02T15:56:40-06:00</expiration>
+  <resourceItemInfo>
+    <resource>urn:uuid:654720c3-8d65-6a8d-e2e5-000000000001</resource>
+    <resourceItem>0</resourceItem>
+    <metadata>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">El Principito</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alfonso Garcés Báez</dc:creator>
+      <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Editorial Uach</dc:publisher>
+      <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">any string value</dc:identifier>
+      <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">application/pdf</dc:format>
+      <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">Español</dc:language>
+      <thumbnailURL>http://pruebaadobe.uach.mx:8080/media/654720c3-8d65-6a8d-e2e5-000000000001.jpg</thumbnailURL>
+    </metadata>
+    <licenseToken>
+      <resource>urn:uuid:654720c3-8d65-6a8d-e2e5-000000000001</resource>
+      <permissions>
+        <display/>
+        <excerpt/>
+        <print/>
+        <play/>
+      </permissions>
+    </licenseToken>
+  </resourceItemInfo>
+  <hmac>xugbztBlkdV6dyXzbrIG1O1eF0g=</hmac>
+</fulfillmentToken>

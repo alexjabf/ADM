@@ -1,0 +1,27 @@
+<div id ="comment">    
+  <h1 style="text-align:center; margin-bottom: 10px;"><%= @hotel.name %></h1>
+  <div id="commentImage" style="margin-right: 58px; background-position: top" >
+    <%=link_to image_tag(@hotel.avatar.url, :size => "200x200"), @hotel.avatar.url, :class =>"group", :title => @hotel.name%>
+  </div>
+  <div id="infocontainer">
+    <br />
+    <font color="#4682B4"><b ><%= "Nombre: "%></b></font><%= @hotel.name %><br />
+    <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @hotel.phone1 %><br /> 
+    <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @hotel.phone2 %><br /> 
+    <font color="#4682B4"><b ><%= "Numero de Fax: "%></b></font><%= @hotel.fax %><br /> 
+    <font color="#4682B4"><b ><%= "Dirección: "%></b></font><%=@hotel.address1 + " " + @hotel.address2%><br />
+    <span style="margin-left: 60px;"><%= "Cd. " + @hotel.city + ", " + @hotel.state + ". "%><br /></span>
+    <span style="margin-left: 60px;"><%= "C.P. " + @hotel.zip.to_s%><br /></span>
+    <font color="#4682B4"><b ><%= "Webpage: "%></b></font><%=link_to @hotel.webpage, @hotel.webpage%><br /> 
+    <font color="#4682B4"><b ><%= "Correo Electrónico: "%></b></font><%=mail_to @hotel.email%><br /> 
+    <font color="#4682B4"><b ><%= "Mas información: "%></b></font><%=link_to "Descargar Flyer",@hotel.flyer.url%> 
+  </div>
+
+
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+    <%= link_to 'Destroy', @hotel, confirm: 'Are you sure?', method: :delete %>
+  <%end%>
+  <br /> 
+  <%= link_to 'Regresar', hotels_path, :style => "float:right", :title => "Regresar al listado de hoteles."%>
+</div>
