@@ -1,22 +1,39 @@
 ADM::Application.routes.draw do
 
-  get "inscriptions/index"
-
+  #get "inscriptions/index"
+  match 'inscripciones' => 'inscriptions#index', :as => :inscriptions_index
+  
+  match 'conferencistas' => 'speakers#index', :as => :speakers
+  match 'conferencistas/nuevo' => 'speakers#new', :as => :new_speaker
+  match 'conferencistas/:id' => 'speakers#show', :as => :speaker
+  match 'conferencistas/:id/editar' => 'speakers#edit', :as => :edit_speaker
   resources :speakers
-
+  
+  match 'eventos' => 'events#index', :as => :events
+  match 'eventos/nuevo' => 'events#new', :as => :new_event
+  match 'eventos/:id' => 'events#show', :as => :event
+  match 'eventos/:id/editar' => 'events#edit', :as => :edit_event
   resources :events
 
+  match 'hoteles' => 'hotels#index', :as => :hotels
+  match 'hoteles/nuevo' => 'hotels#new', :as => :new_hotel
+  match 'hoteles/:id' => 'hotels#show', :as => :hotel
+  match 'hoteles/:id/editar' => 'hotels#edit', :as => :edit_hotel
   resources :hotels
 
-  get "exposition_center/index"
+  #get "exposition_center/index"
+  match 'centro-de-exposiciones' => 'exposition_center#index', :as => :exposition_center
   
   get "ips/index"   
   
-  get "maps/index"
+  #get "maps/index"
+  match 'mapas' => 'maps#index', :as => :maps_index
 
-  get "contact_info/index"
-
-  get "info/index"
+  #get "contact_info/index"
+  match 'informasion-de-contacto' => 'contact_info#index', :as => :contact_info_index
+  
+  #get "info/index"
+  match 'informasion-de-desarollo-web' => 'info#index', :as => :info_index
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
@@ -40,8 +57,17 @@ ADM::Application.routes.draw do
 
   resources :users
 
-  resources :oc_members
 
+  match 'comite-organizador' => 'oc_members#index', :as => :oc_members
+  match 'comite-organizador/nuevo' => 'oc_members#new', :as => :new_oc_member
+  match 'comite-organizador/:id' => 'oc_members#show', :as => :oc_member
+  match 'comite-organizador/:id/editar' => 'oc_members#edit', :as => :edit_oc_member
+  resources :oc_members
+  
+  match 'comentarios' => 'comments#index', :as => :comments
+  match 'comentarios/nuevo' => 'comments#new', :as => :new_comment
+  match 'comentarios/:id' => 'comments#show', :as => :comment
+  match 'comentarios/:id/editar' => 'comments#edit', :as => :edit_comment
   resources :comments
   
   mount Ckeditor::Engine => '/ckeditor'
@@ -49,6 +75,7 @@ ADM::Application.routes.draw do
   get "about_system/index"
 
   get "welcome/index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -2,7 +2,10 @@ class Speaker < ActiveRecord::Base
   attr_accessible :country, :fullname, :topic, :avatar, :conference_date
   has_attached_file :avatar
 
-
+  def to_param
+    "#{id}-#{fullname.parameterize}"
+  end
+  
   Paperclip.interpolates :normalized_file_name do |attachment, style|
     attachment.instance.normalized_file_name
   end

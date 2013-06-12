@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    before_filter :login_required#, :except => [:new, :create, :show]
+   before_filter :login_required#, :except => [:new, :create, :show]
   # GET /comments
   # GET /comments.json
   def index

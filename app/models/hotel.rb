@@ -3,6 +3,10 @@ class Hotel < ActiveRecord::Base
   has_attached_file :avatar
   has_attached_file :flyer
 
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+  
   Paperclip.interpolates :normalized_file_name do |attachment, style|
     attachment.instance.normalized_file_name
   end

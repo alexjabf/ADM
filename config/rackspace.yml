@@ -10,3 +10,6 @@ tets:
     
 production:
     <<: *DEFAULTS
+    
+local:
+    <<: *DEFAULTS    

@@ -1,5 +1,5 @@
 class SpeakersController < ApplicationController
-      before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show]
   # GET /speakers
   # GET /speakers.json
   def index

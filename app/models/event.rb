@@ -2,7 +2,10 @@ class Event < ActiveRecord::Base
   attr_accessible :description, :end_date, :name, :start_date, :avatar, :place
   has_attached_file :avatar
 
-
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+  
   Paperclip.interpolates :normalized_file_name do |attachment, style|
     attachment.instance.normalized_file_name
   end

@@ -13,6 +13,14 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 14, :allow_blank => true
 
+  def fullname
+    first_names + " " + last_names 
+  end
+  
+  def to_param
+    "#{id}-#{fullname.parameterize}"
+  end
+  
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)
