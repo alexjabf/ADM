@@ -124,10 +124,18 @@ ActiveRecord::Schema.define(:version => 20130610173111) do
     t.datetime "avatar_updated_at"
   end
 
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "speakers", :force => true do |t|
     t.string   "fullname"
     t.string   "topic"
     t.string   "country"
+    t.datetime "conference_date"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"

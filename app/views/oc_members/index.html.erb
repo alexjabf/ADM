@@ -10,10 +10,10 @@
       <tr class="float_left_thumb">
         <td class="group" rel="group">
           <div style="margin-bottom: 24px ">
-            <%=link_to image_tag(oc_member.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%>
+            <%=link_to image_tag(oc_member.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), oc_member, :title => "Dar click para Mas información."%>
           </div>
-          <div id="indexlinks1"><%=link_to oc_member.position + ": ", oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
-          <div id="indexlinks2"><%=link_to @Dr + oc_member.fullname, oc_member, :title => oc_member.position + ": " + @Dr + oc_member.fullname%></div>
+          <div id="indexlinks1"><%=link_to oc_member.position + ": ", oc_member, :title => "Dar click para Mas información."%></div>
+          <div id="indexlinks2"><%=link_to @Dr + oc_member.fullname, oc_member, :title => "Dar click para Mas información."%></div>
         </td>
 
       </tr>

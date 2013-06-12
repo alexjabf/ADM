@@ -1,5 +1,7 @@
 ADM::Application.routes.draw do
 
+  get "inscriptions/index"
+
   resources :speakers
 
   resources :events

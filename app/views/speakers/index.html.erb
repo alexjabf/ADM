@@ -6,10 +6,10 @@
       <tr class="float_left_thumb">
         <td class="group" rel="group">
           <div style="margin-bottom: 24px ">
-            <%=link_to image_tag(speaker.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), speaker, :title => speaker.fullname + " (#{speaker.country})"%>
+            <%=link_to image_tag(speaker.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), speaker, :title => "Dar click para Mas información."%>
           </div>
-          <div id="indexlinks1"><%=link_to speaker.fullname + " (#{speaker.country})", speaker, :title => speaker.fullname%></div>
-          <div id="indexlinks2"><%=link_to "Tema: " + speaker.topic, speaker, :title => speaker.topic%></div>
+          <div id="indexlinks1"><%=link_to speaker.fullname + " (#{speaker.country})", speaker, :title => "Dar click para Mas información."%></div>
+          <div id="indexlinks2"><%=link_to "Tema: " + speaker.topic, speaker, :title => "Dar click para Mas información."%></div>
         </td>
 
       </tr>

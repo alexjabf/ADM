@@ -1,20 +1,20 @@
-<div id="co_index">
-  <h2 style="margin-bottom: 30px; text-align: center;">Eventos a Realizar en los 3 Días de Conferencías</h2>
+<div id="co_index" >
+  <h2 style="margin-bottom: 30px; text-align: center;">Eventos Sociales</h2>
   <table style="margin-left: 20px">
     <% @events.each do |event| %>
       <tr class="float_left_thumb">
         <td class="group" rel="group">
           <div style="margin-bottom: 24px ">
-            <%=link_to image_tag(event.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), event, :title => event.name%>
+            <%=link_to image_tag(event.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), event, :title => "Dar click para Mas información."%>
           </div>
-          <div id="indexlinks1"><%=link_to event.name, event, :title => event.name%></div>
-          <div id="indexlinks2"><%=link_to event.place, event, :title => event.place%></div>
-          <div id="indexlinks2"><%=link_to event.start_date, event, :title => event.name%></div>
+          <div id="indexlinks1"><%=link_to event.name, event, :title => "Dar click para Mas información."%></div>
+          <div id="indexlinks2"><%=link_to event.place, event, :title => "Dar click para Mas información."%></div>
+          <div id="indexlinks2"><%=link_to event.start_date, :title => "Dar click para Mas información."%></div>
         </td>
-
       </tr>
     <%end%>
   </table>
+      <br />
 </div>
 <br />
 

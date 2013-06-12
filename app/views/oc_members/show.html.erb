@@ -5,7 +5,7 @@
   });
 </script>
 
-<div id ="comment">    
+<div id ="comment" style="margin-bottom: 20px">    
   <h1 style="text-align:center; margin-bottom: 10px;"><%= @Dr + @oc_member.fullname%></h1>
   <div id="commentImage" style="margin-right: 58px; background-position: top" >
     <%=link_to image_tag(@oc_member.avatar.url, :size => "200x200"), @oc_member.avatar.url, :class =>"group", :title => @oc_member.position + ": " +  @oc_member.fullname%>
@@ -23,13 +23,13 @@
     <font color="#4682B4"><b ><%= "Celular: "%></b></font><%= @oc_member.cellphone %><br /> 
     <font color="#4682B4"><b ><%= "Correo Electrónico: "%></b></font><%=mail_to @oc_member.email%> 
   </div>
-</div>
-
 
 <div id="alllinks">
   <% if logged_in? %>
     <%= link_to 'Editar', edit_oc_member_path(@oc_member.id), :title => "Editar integrante " + @oc_member.fullname%> |
     <%= link_to 'Eliminar', @oc_member, confirm: '¿Esta seguro de eliminar a este integrante del comité organizador?', method: :delete, :title => "Eliminar integrante " + @oc_member.fullname %> |
   <%end%>
+    <div class="fb-like" data-href="http://www.dentaldeprovinciachihuahua2014.com/oc_members/<%= @oc_member.id %>" data-send="true" data-width="450" data-show-faces="true" data-colorscheme="light"></div>
     <%= link_to 'Regresar', oc_members_path, :title => "Regresar al Comité Organizador"%>
+</div>
 </div>

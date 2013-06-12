@@ -13,6 +13,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
 
+
     <title>LXIV Reunión Dental de Provincia Chihuahua 2014</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -26,26 +27,8 @@
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-    </script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
   </head>
@@ -80,7 +63,7 @@
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/hotels" title="Ir a página de Hoteles Sede"><span>Hoteles Sede</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/events" title="Ir a página de Eventos"><span>Eventos</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/speakers" title="Ir a página de Conferencistas"><span>Conferencistas</span></a></li>
-            <li><a href="#" title="Ir a página de Inscripciones"><span>Inscripciones</span></a></li>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/inscriptions/index" title="Ir a página de Inscripciones"><span>Inscripciones</span></a></li>
           </ul>
         </div>	
       </div>
@@ -88,6 +71,7 @@
       <!-- Main -->
 
       <div id="page-body">
+      <%= link_to "Otros links de importancia", "#footer"%>
         <form action="" method="post" id="search" style="position: relative">
           <div class="field-holder">
             <input  type="text" class="field" value="Buscar en el Sitio" title="Buscar en el Sitio" />
@@ -104,21 +88,21 @@
             <div class="cl">&nbsp;</div>
             <div class="col">
               <h2>Jueves 22 de Mayo</h2>
-              <h3>Nombre de la Conferencia Uno</h3>
-              <p>Este día se realizara la conferencia sobre ……</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+              <h3>Coctel de Bienvenida (Noche Country con Caballo Dorado)</h3>
+              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/2" class="more">Mas Información</a></p>
             </div>
             <div class="col">
               <h2>Viernes 23 de Mayo</h2>
-              <h3>Nombre de la Conferencia Dos</h3>
-              <p>Este día se realizara la conferencia sobre ……</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+              <h3>Show en la Catedral y Exposición de Productos Regionales</h3>
+              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/4" class="more">Mas Información</a></p>
             </div>
             <div class="col col-last">
               <h2>Sábado 24 de Mayo</h2>
-              <h3>Nombre de la Conferencia Tres</h3>
-              <p>Este día se realizara la conferencia sobre ……</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+              <h3>Baile de Gala</h3>
+              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/5" class="more">Mas Información</a></p>
             </div>
             <div class="cl">&nbsp;</div>
           </div>
@@ -177,8 +161,14 @@
             <div class="cl">&nbsp;</div>
             <div class="col">
               <h2>Conferencistas</h2>
-              <p>Breve explicación sobre los conferencistas</p>
-              <p><a href="#" class="more">Mas Información</a></p>
+                          <% @speakers = Speaker.find(:all, :order => "created_at ASC")%>
+              <table style="margin-left: 20px">
+                <% @speakers.each do |speaker| %>
+                  <div id="indexlinks1"><%=link_to speaker.fullname + " (#{speaker.country})", speaker, :title => speaker.fullname + " (#{speaker.country})"%></div>
+                  <div id="indexlinks2"><%=link_to speaker.topic, speaker, :title => speaker.topic%></div>
+                <%end%>
+              </table>
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/speakers" class="more">Mas Información</a></p>
               <div class="fb-like" data-href="http://www.dentaldeprovinciachihuahua2014.com/" data-send="true" data-width="450" data-show-faces="true"></div>
               <div class="fb-comments" data-href="http://www.dentaldeprovinciachihuahua2014.com" data-num-posts="6" data-width="400" data-colorscheme="dark"></div>
             </div>

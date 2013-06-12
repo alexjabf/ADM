@@ -1,5 +1,5 @@
 class Speaker < ActiveRecord::Base
-  attr_accessible :country, :fullname, :topic, :avatar
+  attr_accessible :country, :fullname, :topic, :avatar, :conference_date
   has_attached_file :avatar
 
 

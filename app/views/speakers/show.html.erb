@@ -1,4 +1,4 @@
-<div id ="comment" style="margin-bottom: 20px">    
+<div id ="comment" style="margin-bottom: 20px">   
   <h1 style="text-align:center; margin-bottom: 10px;"><%= @speaker.fullname %></h1>
   <div id="commentImage" style="margin-right: 58px; background-position: top" >
     <%=link_to image_tag(@speaker.avatar.url, :size => "200x200"), @speaker.avatar.url, :class =>"group", :title => @speaker.fullname%>
@@ -16,5 +16,6 @@
     <%= link_to 'Destroy', @speaker, confirm: 'Are you sure?', method: :delete %>
   <%end%>
   <br /> 
+  <div class="fb-like" data-href="http://www.dentaldeprovinciachihuahua2014.com/speakers/<%= @speaker.id %>" data-send="true" data-width="450" data-show-faces="true" data-colorscheme="light"></div> 
   <%= link_to 'Regresar', speakers_path, :style => "float:right", :title => "Regresar al listado de hoteles."%>
 </div>
