@@ -6,7 +6,7 @@ ADM::Application.routes.draw do
   match 'conferencistas' => 'speakers#index', :as => :speakers
   match 'conferencistas/nuevo' => 'speakers#new', :as => :new_speaker
   match 'conferencistas/:id' => 'speakers#show', :as => :speaker
-  match 'conferencistas/:id/editar' => 'speakers#edit', :as => :edit_speaker
+  #match 'conferencistas/:id/editar' => 'speakers#edit', :as => :edit_speaker
   resources :speakers
   
   match 'eventos' => 'events#index', :as => :events

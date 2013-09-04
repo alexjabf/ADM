@@ -6,7 +6,7 @@
   <div id="infocontainer";>
     <br />
     <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @hotel.phone1 %><br /> 
-    <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @hotel.phone2 %><br /> 
+    <font color="#4682B4"><b ><%= "Teléfono: "%></b></font><%= @hotel.phone2 %><br />
     <font color="#4682B4"><b ><%= "Numero de Fax: "%></b></font><%= @hotel.fax %><br /> 
     <font color="#4682B4"><b ><%= "Dirección: "%></b></font><%=@hotel.address1 + " " + @hotel.address2%><br />
     <span style="margin-left: 62px;"><%= "Cd. " + @hotel.city + ", " + @hotel.state + ". "%><br /></span>
@@ -14,6 +14,9 @@
     <font color="#4682B4"><b ><%= "Webpage: "%></b></font><%=link_to @hotel.webpage, @hotel.webpage%><br /> 
     <font color="#4682B4"><b ><%= "Correo Electrónico: "%></b></font><%=mail_to @hotel.email%><br /> 
     <font color="#4682B4"><b ><%= "Mas información: "%></b></font><%=link_to "Descargar Flyer",@hotel.flyer.url%> 
+        <%if @hotel.id == 4%> 
+            <br /><font color="#4682B4"><b ><%= "Precio por Noche: "%></b></font><%="$0"%> 
+        <%end%>
   </div>
 
 
