@@ -17,18 +17,20 @@
     <title>LXIV Reunión Dental de Provincia Chihuahua 2014</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <%# rails_tooltip_stuff_if_used %>
+<%# rails_tooltip_stuff_if_used %>
     <%= csrf_meta_tags %>
     <div id="fb-root"></div>
 
     <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+          return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
   </head>
@@ -46,13 +48,13 @@
         </div>
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  <% end %>
+        <% end %>
         <% if logged_in? %>
           <br />
-	  Welcome <%= current_user.first_names + " " + current_user.last_names + ". "%>
+          Welcome <%= current_user.first_names + " " + current_user.last_names + ". "%>
           <%= link_to "Edit profile", edit_user_path(current_user.id) %> or
-	  <%= link_to "Log out", logout_path %><br />
-	  <%= link_to "Ip's", ips_index_path%>
+          <%= link_to "Log out", logout_path %><br />
+          <%= link_to "Ip's", ips_index_path%>
         <% end %>
         <div class="cl">&nbsp;</div>
         <div id="navigation">
@@ -71,7 +73,7 @@
       <!-- Main -->
 
       <div id="page-body">
-      <%= link_to "Otros links de importancia", "#footer"%>
+        <%= link_to "Otros links de importancia", "#footer"%>
         <form action="" method="post" id="search" style="position: relative">
           <div class="field-holder">
             <input  type="text" class="field" value="Buscar en el Sitio" title="Buscar en el Sitio" />
@@ -128,17 +130,17 @@
             </div>
             <div class="col col-last">
               <h2>Centro de Convenciones</h2>
-	      <p>Ave. Tecnológico y Escudero C.P. 31120 Chihuahua, Chihuahua, México
-	      Tel: 52 (614) 214-2600 Fax: 52 (614) 214-2620
-	      01-800-EXPOCHIH (01-800-39762444)
-      	      <%=link_to "www.expochihuahua.com.mx", "http://www.chihuahuamexico.com"%></p>
-	      <%=link_to image_tag("http://www.noticiasaldia.com.mx/img/notas/36598_72fd25ac94.jpg", :size => "256x165", :style => "margin-left:60px"), "http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"%><br /><br />
-	      <p><a href="http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"" class="more">Mas Información</a></p>
+              <p>Ave. Tecnológico y Escudero C.P. 31120 Chihuahua, Chihuahua, México
+                Tel: 52 (614) 214-2600 Fax: 52 (614) 214-2620
+                01-800-EXPOCHIH (01-800-39762444)
+                <%=link_to "www.expochihuahua.com.mx", "http://www.chihuahuamexico.com"%></p>
+              <%=link_to image_tag("http://www.noticiasaldia.com.mx/img/notas/36598_72fd25ac94.jpg", :size => "256x165", :style => "margin-left:60px"), "http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"%><br /><br />
+              <p><a href="http://www.dentaldeprovinciachihuahua2014.com/exposition_center/index"" class="more">Mas Información</a></p>
             </div>
             <div class="cl">&nbsp;</div>
             <div class="col">
-                          <h2>Hoteles Sede</h2>
-                          <% @hotels = Hotel.find(:all, :order => "created_at ASC")%>
+              <h2>Hoteles Sede</h2>
+              <% @hotels = Hotel.find(:all, :order => "created_at ASC")%>
               <table style="margin-left: 20px">
                 <% @hotels.each do |hotel| %>
                   <div id="indexlinks1"><%=link_to hotel.name, hotel, :title => hotel.name%></div>
@@ -149,7 +151,7 @@
             </div>
             <div class="col col-last">
               <h2>Eventos</h2>
-                          <% @events = Event.find(:all, :order => "created_at ASC")%>
+              <% @events = Event.find(:all, :order => "created_at ASC")%>
               <table style="margin-left: 20px">
                 <% @events.each do |event| %>
                   <div id="indexlinks1"><%=link_to event.name, event, :title => event.name%></div>
@@ -161,7 +163,7 @@
             <div class="cl">&nbsp;</div>
             <div class="col">
               <h2>Conferencistas</h2>
-                          <% @speakers = Speaker.find(:all, :order => "created_at ASC")%>
+              <% @speakers = Speaker.find(:all, :order => "created_at ASC")%>
               <table style="margin-left: 20px">
                 <% @speakers.each do |speaker| %>
                   <div id="indexlinks1"><%=link_to speaker.fullname + " (#{speaker.country})", speaker, :title => speaker.fullname + " (#{speaker.country})"%></div>
@@ -174,11 +176,11 @@
             </div>
             <div class="col col-last">
               <h2>Tours y Transportación</h2>
-              <p>Breve explicación sobre los tours y la transportación</p>
-	      <%=link_to "ah-chihuahua", "http://www.ah-chihuahua.com"%><br />
-	       <%=link_to "Chihuahua Barbaro", "http://www.chihuahuabarbaro.com"%>
-	      
-              <p><a href="#" class="more">Mas Información</a></p>
+              <%=link_to image_tag("/assets/emtur_design.jpg", :width => "350px"), transportation_index_path%><br />
+              <%=link_to "Mas Información", transportation_index_path%><br />
+              <%=link_to "www.emtur.com.mx", "http://www.emtur.com.mx"%><br />
+              <%=link_to "ah-chihuahua", "http://www.ah-chihuahua.com"%><br />
+              <%=link_to "Chihuahua Barbaro", "http://www.chihuahuabarbaro.com"%><br /><br />
               <div class="fb-activity" data-site="dentaldeprovinciachihuahua2014.com" data-width="400" data-height="300" data-header="true" data-border-color="black" data-font="arial" data-recommendations="true" data-colorscheme="dark"></div>
 
             </div>
