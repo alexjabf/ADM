@@ -19,7 +19,7 @@
       <td style="padding:10px;"><%= ip.address %></td>
       <td style="padding:10px;"><%= ip.city %></td>
       <td style="padding:10px;"><%= ip.state %></td>
-      <td style="padding:10px;"><%= ip.country %> <%=image_tag("/assets/flags/png/"+ ip.country_code.downcase + ".png")%></td>
+      <td style="padding:10px;"><%= ip.country %> <%=image_tag("/assets/flags/png/"+ ip.country_code.downcase + ".png") unless ip.country_code.blank?%></td>
       <td style="padding:10px;"><%= ip.created_at %></td>
     </tr>
 
