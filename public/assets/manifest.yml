@@ -21,6 +21,8 @@ ciudad2.jpg: ciudad2-437fd3e78a73f4252ad8588db7bd3a57.jpg
 ciudad3.bmp: ciudad3-4c8f7bbd79b355b376e64fb25374b804.bmp
 ciudad4.jpg: ciudad4-d35530652e8c6cf15e433878e78d5d29.jpg
 ciudad5.jpg: ciudad5-39dd90f702a378520887da36aff098c3.jpg
+emtur_design.jpg: emtur_design-4c2b60a1ef964dd1f9b9bdd425b333a9.jpg
+emtur_design.pdf: emtur_design-a154fc46592694cd73386c5ecadf47ea.pdf
 favicon.ico: favicon-9719921d6742e0cb485f61c89ca7817d.ico
 flags/gif/ad.gif: flags/gif/ad-89b190a327b0b199149dda61fcd202f6.gif
 flags/gif/ae.gif: flags/gif/ae-3968f5661eca00ce2f210ffdb733ead2.gif
@@ -526,7 +528,7 @@ header3.jpg: header3-0506b85fa70be383d24d02252488bd49.jpg
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 skyblue1.jpg: skyblue1-7bd05f8af70f788113735073723a928f.jpg
 tour1.jpg: tour1-957df018de5833e1bd05552c2ec3ca21.jpg
-application.js: application-84a16e8affdf5166ff731d6bad99bfae.js
+application.js: application-735efc533897873f898ef964f8b1c38f.js
 js/fancybox/Thumbs.db: js/fancybox/Thumbs-7349e3f584839cd8ffe99d491759b00d.db
 js/fancybox/fancy_closebox.png: js/fancybox/fancy_closebox-9ed964b98732ec1c3191319d3e47dce8.png
 js/fancybox/fancy_left.png: js/fancybox/fancy_left-6a2842d6e68e3ef6959a823bf619d19e.png
@@ -543,7 +545,7 @@ js/fancybox/fancy_shadow_w.png: js/fancybox/fancy_shadow_w-c136a62a5c6c9b6c79e5d
 js/fancybox/fancy_title_left.png: js/fancybox/fancy_title_left-19beb4bde0e188edecaea7cee26283f7.png
 js/fancybox/fancy_title_main.png: js/fancybox/fancy_title_main-781cbac0a10a4a6d6eb5a3f51364f673.png
 js/fancybox/fancy_title_right.png: js/fancybox/fancy_title_right-9d8f72398074721f9fb1550cb8e862ff.png
-application.css: application-52dbfa4cffb1aedcb77cfde92b10e424.css
+application.css: application-5d44a1efac9aa7e8e68016a44911a8ad.css
 css/images/arr.gif: css/images/arr-8b4786c03aadfe8ad836fafddb97cb1f.gif
 css/images/bg.gif: css/images/bg-27bb84aad0780f940a6ccaf8a0a242ed.gif
 css/images/button-more.gif: css/images/button-more-580eaea73808de580e1c9401e74b3094.gif

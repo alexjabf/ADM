@@ -1,5 +1,7 @@
 ADM::Application.routes.draw do
 
+  get "transportation/index"
+
   #get "inscriptions/index"
   match 'inscripciones' => 'inscriptions#index', :as => :inscriptions_index
   
