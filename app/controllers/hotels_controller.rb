@@ -3,7 +3,7 @@ class HotelsController < ApplicationController
   # GET /hotels
   # GET /hotels.json
   def index
-    @hotels = Hotel.all
+    @hotels = Hotel.find(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

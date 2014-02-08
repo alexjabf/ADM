@@ -35,4 +35,4 @@ production:
   pool: 5
   username: dentalde_admin
   password: alexjabf990480as
-  socket: /tmp/mysql.sock
+#  socket: /tmp/mysql.sock
