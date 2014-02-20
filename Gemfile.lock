@@ -82,7 +82,6 @@ GEM
     paperclip-cloudfiles (2.3.10.1)
       activerecord
       activesupport
-    pg (0.17.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -153,7 +152,6 @@ DEPENDENCIES
   nifty-generators
   paperclip
   paperclip-cloudfiles
-  pg
   rails (= 3.2.3)
   rails_tooltip
   railties
