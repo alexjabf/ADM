@@ -62,9 +62,9 @@
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com" title="Ir a página de Inicio" class="active"><span>Inicio</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/comite-organizador" title="Ir a página del Comité Organizador"><span>Comité Organizador</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/centro-de-exposiciones" title="Ir a página de Centro de Convenciones"><span>Centro de Convenciones</span></a></li>
-            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/hoteles" title="Ir a página de Hoteles Sede"><span>Hoteles Sede</span></a></li>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/hoteles" title="Ir a página de Hoteles Sede"><span>Hoteles</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/expositores" title="Ir a página de Eventos"><span>Expositores</span></a></li>
-            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/conferencistas" title="Ir a página de Conferencistas"><span>Conferencistas</span></a></li>
+            <li><a href="http://www.dentaldeprovinciachihuahua2014.com/speakers" title="Ir a página de Conferencistas"><span>Conferencistas</span></a></li>
             <li><a href="http://www.dentaldeprovinciachihuahua2014.com/inscripciones" title="Ir a página de Inscripciones"><span>Inscripciones</span></a></li>
           </ul>
         </div>	
@@ -91,19 +91,19 @@
             <div class="col">
               <h2>Jueves 22 de Mayo</h2>
               <h3>Coctel de Bienvenida (Noche Country con Caballo Dorado)</h3>
-              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <p><%=link_to "Descargar programa del día 22", "/assets/programa22.xlsx"%></p>
               <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/2" class="more">Mas Información</a></p>
             </div>
             <div class="col">
               <h2>Viernes 23 de Mayo</h2>
               <h3>Baile de Gala</h3>
-              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <p><%=link_to "Descargar programa del día 23", "/assets/programa23.xlsx"%></p>              
               <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/5" class="more">Mas Información</a></p>
             </div>
             <div class="col col-last">
               <h2>Sábado 24 de Mayo</h2>
-              <h3>Show en la Catedral y Exposición de Productos Regionales</h3>
-              <p>Próximamente se publicaran las conferencias que se impartirán este día.</p>
+              <h3>Festejo de Clausura</h3>
+              <p><%=link_to "Descargar programa del día 24", "/assets/programa24.xlsx"%></p>              
               <p><a href="http://www.dentaldeprovinciachihuahua2014.com/events/4" class="more">Mas Información</a></p>
             </div>
             <div class="cl">&nbsp;</div>
@@ -114,7 +114,7 @@
             <div class="cl">&nbsp;</div>
             <div class="col">
               <h2>Comité Organizador</h2>
-              <% @oc_members = OcMember.find(:all, :order => "created_at ASC")%>
+              <% @oc_members = OcMember.find(:all, :order => "created_at ASC", :limit => 8)%>
               <table style="margin-left: 20px">
                 <% @oc_members.each do |oc_member| %>
                   <% if oc_member.sex_type == "Hombre" %>
@@ -140,7 +140,7 @@
             <div class="cl">&nbsp;</div>
             <div class="col">
               <h2>Hoteles Sede</h2>
-              <% @hotels = Hotel.find(:all, :order => "created_at ASC")%>
+              <% @hotels = Hotel.find(:all, :order => "created_at ASC", :limit => 3)%>
               <table style="margin-left: 20px">
                 <% @hotels.each do |hotel| %>
                   <div id="indexlinks1"><%=link_to hotel.name, hotel, :title => hotel.name%></div>
@@ -177,10 +177,11 @@
             <div class="col col-last">
               <h2>Tours y Transportación</h2>
               <%=link_to image_tag("/assets/emtur_design.jpg", :width => "350px"), transportation_index_path%><br />
-              <%=link_to "Mas Información", transportation_index_path%><br />
-              <%=link_to "www.emtur.com.mx", "http://www.emtur.com.mx"%><br />
-              <%=link_to "ah-chihuahua", "http://www.ah-chihuahua.com"%><br />
+              <%=link_to "www.emtur.com.mx", "http://www.emtur.com.mx"%><br /><br />
+              <%=link_to image_tag("/assets/chihbarbaro.jpg", :width => "350px"), transportation_index_path%><br />              
               <%=link_to "Chihuahua Barbaro", "http://www.chihuahuabarbaro.com"%><br /><br />
+              <%=link_to "ah-chihuahua", "http://www.ah-chihuahua.com"%><br />
+              <%=link_to "Mas Información", transportation_index_path%><br />              
               <div class="fb-activity" data-site="dentaldeprovinciachihuahua2014.com" data-width="400" data-height="300" data-header="true" data-border-color="black" data-font="arial" data-recommendations="true" data-colorscheme="dark"></div>
 
             </div>

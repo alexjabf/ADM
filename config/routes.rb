@@ -8,16 +8,16 @@ ADM::Application.routes.draw do
   #get "inscriptions/index"
   match 'inscripciones' => 'inscriptions#index', :as => :inscriptions_index
   
-  match 'conferencistas' => 'speakers#index', :as => :speakers
-  match 'conferencistas/nuevo' => 'speakers#new', :as => :new_speaker
-  match 'conferencistas/:id' => 'speakers#show', :as => :speaker
+  #match 'conferencistas' => 'speakers#index', :as => :speakers
+  #match 'conferencistas/nuevo' => 'speakers#new', :as => :new_speaker
+  #match 'conferencistas/:id' => 'speakers#show', :as => :speaker
   #match 'conferencistas/:id/editar' => 'speakers#edit', :as => :edit_speaker
   resources :speakers
   
-  match 'eventos' => 'events#index', :as => :events
-  match 'eventos/nuevo' => 'events#new', :as => :new_event
-  match 'eventos/:id' => 'events#show', :as => :event
-  match 'eventos/:id/editar' => 'events#edit', :as => :edit_event
+  #match 'eventos' => 'events#index', :as => :events
+  #match 'eventos/nuevo' => 'events#new', :as => :new_event
+  #match 'eventos/:id' => 'events#show', :as => :event
+  #match 'eventos/:id/editar' => 'events#edit', :as => :edit_event
   resources :events
 
   match 'hoteles' => 'hotels#index', :as => :hotels

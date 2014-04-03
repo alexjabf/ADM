@@ -8,7 +8,14 @@
     <font color="#4682B4"><b ><%= "Lugar: "%></b></font><%= @event.place %><br />
     <font color="#4682B4"><b ><%= "Inicia: "%></b></font><%= @event.start_date %><br /> 
     <font color="#4682B4"><b ><%= "Termina: "%></b></font><%= @event.end_date %><br /> 
-    <%= @event.description %><br />  
+    <%= @event.description %><br />
+    <% if @event.id == 2 %> 
+        <p><%=link_to "Descargar programa del día 22", "/assets/programa22.xlsx"%></p>
+    <% elsif @event.id == 5 %>
+        <p><%=link_to "Descargar programa del día 23", "/assets/programa23.xlsx"%></p> 
+    <% elsif @event.id == 4 %> 
+        <p><%=link_to "Descargar programa del día 24", "/assets/programa24.xlsx"%></p>
+    <% end %> 
   </div>
 
 
