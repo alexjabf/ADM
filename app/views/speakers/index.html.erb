@@ -9,7 +9,7 @@
             <%=link_to image_tag(speaker.avatar.url, :size => "136x136", :style => "padding-right: 8px" ), speaker, :title => "Dar click para Mas información."%>
           </div>
           <div id="indexlinks1"><%=link_to speaker.fullname.upcase + " (#{speaker.country})", speaker, :title => "Dar click para Mas información."%></div>
-          <div id="indexlinks2"><%=link_to "Tema: " + speaker.topic.titlecase, speaker, :title => "Dar click para Mas información."%></div>
+          <div id="indexlinks2"><%=link_to truncate("Tema: " + speaker.topic.titlecase, :length => 50, :omission => '... mas'), speaker, :title => "Dar click para Mas información."%></div>
         </td>
 
       </tr>

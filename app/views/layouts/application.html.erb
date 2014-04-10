@@ -151,7 +151,7 @@
             </div>
             <div class="col col-last">
               <h2>Eventos</h2>
-              <% @events = Event.find(:all, :order => "created_at ASC")%>
+              <% @events = Event.order("updated_at ASC")%>
               <table style="margin-left: 20px">
                 <% @events.each do |event| %>
                   <div id="indexlinks1"><%=link_to event.name, event, :title => event.name%></div>
