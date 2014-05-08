@@ -1,5 +1,8 @@
 ADM::Application.routes.draw do
 
+  #get "exposition_info/index"
+  match 'exposicion-de-carteles' => 'exposition_info#index', :as => :exposition_center
+  
   match 'expositores' => 'exhibitors#index', :as => :exhibitors
   get "exhibitors/index"
 
